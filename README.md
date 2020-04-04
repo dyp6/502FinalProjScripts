@@ -1,5 +1,7 @@
 # 502FinalProjScripts
-First script is just taking all of the congress tweet json files, and converting them into monthly DataFrames for dask. 
+### MonthlyCongressCSVs.ipynb:
+
+This script is taking all of the congress tweet json files, and converting them into monthly DataFrames for dask. 
 
 The directories in the bucket for the csv data are named {June17.csv, July17.csv, Aug17.csv, ..., Jan18.csv, Feb18.csv, ..., Nov19.csv, Dec19.csv}. To read a month into a new notebook, you should use the command
 
