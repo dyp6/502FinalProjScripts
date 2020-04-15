@@ -1,0 +1,14 @@
+Learned topics for June 2017 congress tweets (as distributions over vocab of 2946 words):
+
+The lower bound on the log likelihood of the entire corpus: -1357656.211227925
+The upper bound on perplexity: 7.146236018296076
+
+----------
+topic: 0
+----------
+great | work | house | join | vote | support | act | american | trump | right | help | im | bill | proud | law | 
+----------
+topic: 1
+----------
+bill | health | care | trumpcare | senate | gop | american | medicaid | cut | people | healthcare | republican | family | tax | work | 
+========================================================================
