@@ -1,26 +1,26 @@
-Learned topics for Aug 2017 congress tweets (as distributions over vocab of 3500 words):
+Learned topics for Dec 2017 congress tweets (as distributions over vocab of 3500 words):
 
-The lower bound on the log likelihood of the entire corpus: -2785161.2997116107
-The upper bound on perplexity: 7.4235730765439625
+The lower bound on the log likelihood of the entire corpus: -4512674.012049302
+The upper bound on perplexity: 7.133624851482948
 
 ----------
 topic: 0
 ----------
-charlottesville | stand | town | hall | hate | must | country | look | law | violence | american | forward | pardon | join | new | serve | america | one | nation | honor | veteran | people | racism | place | service | 
+tax | bill | american | cut | goptaxscam | family | vote | republican | job | house | senate | work | taxreform | pass | reform | people | plan | middle | gop | class | go | pay | health | act | help | 
 ----------
 topic: 1
 ----------
-great | visit | join | tour | new | community | job | discuss | happy | office | morning | support | work | county | th | good | year | proud | talk | enjoy | learn | service | center | birthday | business | 
+trump | join | president | internet | netneutrality | investigation | call | fbi | must | open | people | fcc | house | sexual | need | tune | free | discuss | realdonaldtrump | american | im | question | member | work | congress | 
 ----------
 topic: 2
 ----------
-trump | work | tax | american | potus | president | need | white | reform | realdonaldtrump | must | job | people | family | year | take | right | taxreform | fight | say | health | house | let | new | keep | 
+congress | act | pass | dreamer | must | need | work | lose | bill | fund | fight | support | state | program | law | child | help | protect | community | health | country | dreamactnow | continue | daca | student | 
 ----------
 topic: 3
 ----------
-help | harvey | need | texas | bill | act | work | prayer | white | hurricaneharvey | flood | right | safe | please | house | thoughts | people | go | support | first | call | victim | senate | pass | family | 
+fire | de | first | good | people | thomasfire | go | update | want | say | vote | alabama | dont | public | trump | keep | please | land | right | county | news | el | sure | open | call | 
 ----------
 topic: 4
 ----------
-defenddaca | dreamer | daca | protect | tune | trump | north | must | discuss | eclipse | korea | end | pm | country | join | say | rep | change | talk | threat | solareclipse | stop | stand | potus | climate | 
+christmas | great | family | happy | holiday | wish | celebrate | merry | love | one | friend | new | season | state | everyone | honor | woman | join | congratulations | serve | world | home | man | service | hanukkah | 
 ========================================================================
