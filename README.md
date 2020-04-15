@@ -8,3 +8,22 @@ The directories in the bucket for the csv data are named {June17.csv, July17.csv
 "DF = dd.read_csv('s3://502finalprojbucky/congresstweets/data/\<csv Directory Name\>/*.part')"
  
 They were broken into .part files by dask when written to the bucket. The "\*.part" is just collecting all of the files in the directory, then dask.dataframe (imported as dd usually), has a read_csv() that puts them all together into one big DataFrame that you can work with virtually the same as a pandas DF. 
+
+
+### Cluster Set Up I Have Been Using
+
+Software Configuration:  
+
+![Software Config](https://502finalprojbucky.s3.amazonaws.com/ClusterPics/SoftwareConfig.png)  
+
+Hardware Configuration:  
+
+![Hardware Config](https://502finalprojbucky.s3.amazonaws.com/ClusterPics/HardwareConfig.png)  
+
+General Options:  
+
+![General Options](https://502finalprojbucky.s3.amazonaws.com/ClusterPics/GeneralOptions.png)  
+
+Security Options:  
+
+![Security Options](https://502finalprojbucky.s3.amazonaws.com/ClusterPics/SecurityOptions.png)  
