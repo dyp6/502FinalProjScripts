@@ -1,26 +1,22 @@
-Learned topics for Dec 2017 congress tweets (as distributions over vocab of 3500 words):
+Learned topics for Dec 2019 congress tweets (as distributions over vocab of 3500 words):
 
-The lower bound on the log likelihood of the entire corpus: -4512674.012049302
-The upper bound on perplexity: 7.133624851482948
+The lower bound on the log likelihood of the entire corpus: -5854242.534467359
+The upper bound on perplexity: 7.219482836208584
 
 ----------
 topic: 0
 ----------
-tax | bill | american | cut | goptaxscam | family | vote | republican | job | house | senate | work | taxreform | pass | reform | people | plan | middle | gop | class | go | pay | health | act | help | 
+president | right | trump | vote | people | country | family | american | one | holiday | house | election | power | happy | christmas | fight | know | take | wish | congress | democracy | abuse | love | celebrate | go | woman | constitution | friend | great | must | state | world | stand | nation | im | serve | america | never | season | office | 
 ----------
 topic: 1
 ----------
-trump | join | president | internet | netneutrality | investigation | call | fbi | must | open | people | fcc | house | sexual | need | tune | free | discuss | realdonaldtrump | american | im | question | member | work | congress | 
+impeachment | democrat | house | president | trump | vote | say | realdonaldtrump | republican | committee | report | fact | call | article | american | senate | people | one | witness | join | evidence | judiciary | dem | process | open | chairman | office | tune | sham | ukraine | court | talk | question | investigation | dont | health | rule | week | take | case | 
 ----------
 topic: 2
 ----------
-congress | act | pass | dreamer | must | need | work | lose | bill | fund | fight | support | state | program | law | child | help | protect | community | health | country | dreamactnow | continue | daca | student | 
+president | house | vote | american | pass | trump | usmca | impeachment | bill | drug | democrat | act | cost | bipartisan | realdonaldtrump | trade | law | low | people | work | would | senate | support | prescription | deal | impeach | price | congress | agreement | legislation | one | climate | housedemocrats | republican | worker | since | country | take | action | farmer | 
 ----------
 topic: 3
 ----------
-fire | de | first | good | people | thomasfire | go | update | want | say | vote | alabama | dont | public | trump | keep | please | land | right | county | news | el | sure | open | call | 
-----------
-topic: 4
-----------
-christmas | great | family | happy | holiday | wish | celebrate | merry | love | one | friend | new | season | state | everyone | honor | woman | join | congratulations | serve | world | home | man | service | hanukkah | 
+work | help | family | community | bill | new | support | act | need | fund | im | proud | health | job | american | continue | care | state | fight | student | great | include | tax | ensure | protect | federal | pass | pay | provide | life | congress | must | house | bipartisan | people | service | program | across | military | veteran | 
 ========================================================================
