@@ -1,0 +1,14 @@
+Learned topics for  all tweets (as distributions over vocab of 7500 words):
+
+The lower bound on the log likelihood of the entire corpus: -602609673.559737
+The upper bound on perplexity: 7.935942688397049
+
+----------
+topic: 0
+----------
+trump | say | love | dont | know | good | break | video | call | like | president | obama | go | think | man | 
+----------
+topic: 1
+----------
+news | new | people | trump | thank | work | american | one | need | help | follow | year | world | first | go | 
+========================================================================
