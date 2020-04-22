@@ -1,22 +1,22 @@
-Learned topics for Dec 2019 congress tweets (as distributions over vocab of 3500 words):
+Learned topics for Dec 2017 congress tweets (as distributions over vocab of 3500 words):
 
-The lower bound on the log likelihood of the entire corpus: -5854242.534467359
-The upper bound on perplexity: 7.219482836208584
+The lower bound on the log likelihood of the entire corpus: -3134482.196443486
+The upper bound on perplexity: 7.46304559843371
 
 ----------
 topic: 0
 ----------
-president | right | trump | vote | people | country | family | american | one | holiday | house | election | power | happy | christmas | fight | know | take | wish | congress | democracy | abuse | love | celebrate | go | woman | constitution | friend | great | must | state | world | stand | nation | im | serve | america | never | season | office | 
+saniyapti | nawaz | say | sharif | court | pakistan | take | report | news | government | use | minister | barbiequeenpti | people | woman | also | corruption | go | work | election | win | country | good | need | would | new | great | think | life | justice | case | prime | fake | supreme | media | high | show | help | party | muslim | 
 ----------
 topic: 1
 ----------
-impeachment | democrat | house | president | trump | vote | say | realdonaldtrump | republican | committee | report | fact | call | article | american | senate | people | one | witness | join | evidence | judiciary | dem | process | open | chairman | office | tune | sham | ukraine | court | talk | question | investigation | dont | health | rule | week | take | case | 
+trump | president | libertyfrontpr | realdonaldtrump | tax | obama | fbi | break | say | go | people | first | foxnews | qanon | vote | bill | american | mueller | america | cut | democrat | potus | house | truthfeednews | gop | want | call | lie | work | end | sexual | new | flynn | dont | country | know | investigation | maga | corruption | state | 
 ----------
 topic: 2
 ----------
-president | house | vote | american | pass | trump | usmca | impeachment | bill | drug | democrat | act | cost | bipartisan | realdonaldtrump | trade | law | low | people | work | would | senate | support | prescription | deal | impeach | price | congress | agreement | legislation | one | climate | housedemocrats | republican | worker | since | country | take | action | farmer | 
+muslim | pakistan | jerusalem | israel | world | palestine | people | palestinian | country | trump | right | one | capital | saveyemen | war | deleteisrael | united | yemen | kill | nation | child | un | decision | state | peace | take | israeli | barbiequeenpti | saudi | kulsoomzaidi | must | yemeni | stop | like | saudiaarabia | ألفيوممنالعدوان | fatalday | say | stand | khan | 
 ----------
 topic: 3
 ----------
-work | help | family | community | bill | new | support | act | need | fund | im | proud | health | job | american | continue | care | state | fight | student | great | include | tax | ensure | protect | federal | pass | pay | provide | life | congress | must | house | bipartisan | people | service | program | across | military | veteran | 
+one | exo | good | police | love | manalfarida | im | say | like | new | man | christmas | go | quran | life | know | well | people | allah | happy | want | way | thing | heart | dont | win | start | team | give | family | guy | join | trend | never | kpk | khan | first | great | fbi | please | 
 ========================================================================

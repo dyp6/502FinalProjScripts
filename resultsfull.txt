@@ -1,14 +1,26 @@
-Learned topics for  all tweets (as distributions over vocab of 7500 words):
+Results for LDA Topic Prediction on Full Set of Tweets
+=======================================================================================================================================================
 
-The lower bound on the log likelihood of the entire corpus: -602609673.559737
-The upper bound on perplexity: 7.935942688397049
+Topic 1: 3616543 Total Tweets
+  - 3320266 Tweets from Suspected Information Operations
+  - 296277 Tweets from Congress Accounts
 
-----------
-topic: 0
-----------
-trump | say | love | dont | know | good | break | video | call | like | president | obama | go | think | man | 
-----------
-topic: 1
-----------
-news | new | people | trump | thank | work | american | one | need | help | follow | year | world | first | go | 
-========================================================================
+Topic 2: 3586269 Total Tweets
+  - 2542663 Tweets from Suspected Information Operations Tweets
+  - 1043606 Tweets from Congress Accounts
+
+Distribution of Tweet Type by Topic:
+  - Topic 1: 56.63% of all Suspected Information Operations Tweets, and 22.11% of all Congress Tweets
+  - Topic 2: 43.37% of all Suspected Information Operations Tweets, and 77.89% of all Congress Tweets
+
+
+Top 50 Words for Both Topics
+=======================================================================================================================================================
+
+Topic: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+trump | say | love | dont | know | good | break | video | call | like | president | obama | go | think | man | new | woman | let | thing | vote | great | happy | hillary | state | give | friend | use | kill | girl | cant | tell | tweet | life | america | white | take | one | u | right | people | police | media | clinton | attack | would | black | look | recipe | youre | want | 
+
+Topic: 2
+------------------------------------------------------------------------------------------------------------------------------------------------------
+news | new | people | trump | thank | work | american | one | need | help | follow | year | world | first | go | take | like | come | want | house | support | well | country | back | fight | bill | look | life | health | family | way | good | must | muslim | president | never | act | right | live | everyone | woman | leave | put | community | care | great | job | man | sport | report | 
