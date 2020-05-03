@@ -1,11 +1,11 @@
 # Information Operations: A Comparative Analysis of Congressional and State-Backed Influence Tweets
 
-By: Patrick Aquino, Adam Imran, Thomas P. Malejko, and Douglas Post
+By: Patrick Aquino, Adam Imran, Thomas P. Malejko, and Douglas Post <br> <br>
 
-Georgetown University
-Analytics 502: Massive Data
-Dr. Marck Vaisman
-5 May 2020
+Georgetown University <br>
+Analytics 502: Massive Data <br>
+Dr. Marck Vaisman <br>
+5 May 2020 <br>
 
 
 
