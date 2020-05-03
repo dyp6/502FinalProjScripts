@@ -11,15 +11,13 @@ Dr. Marck Vaisman
 
 
 ## Introduction, Background, and Motivation
-______________________________________________________________________
+
 
 Much of what western observers consider warfare is based upon the philosophies of Carl von Clausewitz—a 20th Century military theorist—who believed that war was the extension of politics by other means; a contest between two sovereign states seeking political gain. The ultimate objective of this warfare was to secure a physical victory on the battlefield such that the enemy was forced to capitulate. The victor&#39;s political demands forever enshrined in the end-of-war treaty—much like the Treaty of Versailles captured the demands of the Allied Powers at the conclusion of World War I. However, the post-World War II security construct largely made this form of warfare either illegal or too costly to pursue. As a result, warfare underwent a slow mutation, becoming less kinetic in the process. The first mutation—guerilla conflicts like the Vietnam and Nicaraguan Contra Wars. The next, proxy-backed insurgencies like the recent conflicts in Iraq and Syria. Finally, information warfare. While the desire to misinform, deceive, and otherwise non-kinetically engage an enemy force is as old as war itself—the modern manifestation is vastly different from the fabled Trojan Horse (a prominent example of information warfare). Whereas historical information operations sought to enhance military operations on the physical battlefield, modern incarnations of these operations are now the principal form of warfare. Largely fueled by the internet&#39;s rapid ascendancy, individuals and states seeking to deceive a population now have the unprecedented ability to do so with just a few clicks (Patrikarakos, 2017). Russian interference in the 2016 United States Presidential Election and foreign influence campaigns during BREXIT are just two contemporary examples where foreign actors desired to influence the political affairs of another, sovereign state. As a result, politicians have an increasing responsibility to communicate with their constituents to provide a source of truth amid a glut of disinformation and fake news.
 
 Twitter, a microblogging and social networking service, is one of the principal tools leveraged by those engaged in information warfare due to its popularity and simplicity. Both, those seeking to inform and deceive, have the ability to share 280-character &#39;tweets&#39; with billions of people—spread across the world—with just a few clicks. Therefore, the need to separate reality from fiction, truth from falsehood, and facts from lies on this platform is a non-trivial pursuit. According to the Rand Corporation, &quot;the United States has a pressing capability gap in its ability to detect malign or subversive information campaigns…before these efforts substantially influence the attitudes and behaviors of large audiences&quot; (Marcellino et al., 2020, p. ix). This challenge is so perverse, that the United States Congress has implored social media companies—including Twitter—to disrupt these foreign information operations directly (_Senate: Foreign Influence Operations_, 2018, pp. 2–3). One such effort to detect information operations on social media involves the use of community lexical analysis, which combines network and textual analyses to understand social network structures (Marcellino et al., 2020, p. 9). Building upon this methodology, we sought to identify any textual commonalities or differences that exist between the tweets of congressional leaders and those who attempt to deceive the American public for their own benefit.
 
 ## The Data
-______________________________________________________________________
-
 
 **The Raw Data**
 
@@ -32,7 +30,7 @@ Once the data was loaded into a public Amazon S3 Bucket, the first step was to a
 Since the overall plan was to do textual analysis with this data, we had to decide how to handle suspected information operations tweets in foreign languages because we sought to compare the two datasets side-by-side. A large number of the accounts in the suspected information operations database were from other countries and, subsequently, many of those tweets were in other languages. The congressional tweets dataset was, on the other hand, entirely in English. Thus, the information operations dataset was filtered again for only observations having a _tweet\_language_ of English. This trimmed that dataset to approximately 10 gigabytes in size, which was much more manageable size for training a topic model, when combined with the 1.2 gigabytes from the congressional tweets dataset. Additionally, any observations with null values in the _tweet\_text_ column were dropped as well as observations with the same _screen\_name_ and _tweet\_text_. While the number of times an account tweets the same information is definitely a relevant piece of information, duplicates would only serve to skew the results for topic modeling. After all wrangling, cleaning, and merging of the datasets was complete, the final dataset was roughly 10 gigabytes in size.
 
 ## Exploratory Data Analysis
-______________________________________________________________________
+
  **General Analysis**
 
 ![](RackMultipart20200503-4-61xuvo_html_746157c635ed9a65.gif) As part of the initial analysis, preliminary statistics and plots were generated to gain a better understanding of any trends or themes worth further investigation. Since the data was largely text-based, traditional summary statistics would not provide appropriate insights. As a result, the data was aggregated and plotted to achieve this effect. The first attempt to understand the data was to plot the daily tweet frequency for each dataset which revealed some interesting trends. The plots are below:
@@ -66,7 +64,7 @@ _Figure 5. Frequency graphs and word clouds for info Ops tweets_
 The word cloud and bar chart of these potentially malign-intention tweets show references to many of the same words as the congressional tweets with some notable differences—emotion-filled words, contentious topics, and specific groups of people. From these visualizations we can gather that angry words are common—such as attack, kill, and leave—but on the other side positive-emotion words like happy and love are also frequent. Similarly, contentious words like Obama, Hillary, Trump and news also appear among the top words in this dataset. Finally, specific groups that cause emotional responses for certain segments of the American population (such as Muslims, police, and ISIS) are prevalent.
 
 ## Methodology
-______________________________________________________________________
+
 The main method used in this project is Latent Dirichlet Allocation (LDA), however all of the preprocessing and preparation for LDA will be discussed in detail for the remainder of this section. LDA, as well as most natural language processing methods, often works best when the text is tailored to the actual process of the algorithm. LDA uses word frequencies with term-document frequencies to find documents similar to each other in the corpus and classify them into a pre-specified number of topics. Term-document frequencies represent the amount that a term appears in separate documents, while term frequencies alone represent the overall frequency that a specific term is used in the corpus. The process of LDA, that was just described, necessitates text modification so important terms are not drowned out by common words, which are especially prevalent in a corpus of tweets.
 
 There are a number of pre-made stop word sets, and we used the one from PySpark&#39;s NLTK package. Stop words sets remove some of the most common words—like a, the, it, and, so, but, etc.—as well as words that have no relevance to the overall topic of a document—like then, after, they, there, because, etc. No set of stop words is perfect, so throughout the monthly topic modeling process, which is described below, words that seemed to be overpowering with little or no meaning, and groupings of letters that do not make sense were added to the set of stop words. The final set of added stop words is pictured below.
@@ -79,7 +77,7 @@ Once the set of stop words was finalized, the final preprocessing pipeline was u
 The next objective evaluated for this project was to see how well this LDA model could distinguish between the two types of tweets—congressional or suspected information operations. For this task, the vocabulary size and minimum term frequency were both increased to account for the greater size of the corpus, but other parameters remained the same. Then the model was run to search for two topics, in hopes that it could effectively separate information operations and congressional tweets. The results of this process will also be discussed in the following sections.
 
 ## Results and Interpretations
-______________________________________________________________________
+
 **Monthly Topic Modelling**
 
 The results of the monthly topic model were compiled and inputted into a timeline in order to make examination easier. The timeline can be viewed in either two or three dimensions at this [1](#sdfootnote1anc)[link](https://www.tiki-toki.com/timeline/entry/1420338/Congressional-and-Information-Operations-Monthly-Tweet-Topics). In 3D, the topics are visible without the need to click and open them.
@@ -97,7 +95,7 @@ _Figure 7. Detailed output for the predictive LDA process._
 As seen in the figures above, the LDA model did not effectively separate the two tweets into two distinct topics. A few key notes to note. First, congressional tweets were easier to categorize—about 78% in Topic 2 and 22% in Topic 1. This could be due to the largely legislative focus of that group&#39;s tweet corpus. Conversely, the information operations tweets were uniformly distributed across the two topics, which highlights the challenges of identifying attempts by bad actors who desire to influence the American public for their own benefit. As was identified in the NLP EDA, &#39;Trump&#39; was a common term in both search topics.
 
 ## Conclusions
-______________________________________________________________________
+
 As detailed above, Latent Dirichlet Allocation (alone) is not sufficient to predict whether a tweet originated from a congressional leader or a foreign actor attempting to maliciously influence the American population. Therefore, only limited conclusions can be drawn from this study. First, tweets originating from foreign actors engaged in information operations tend to use evocative, emotionally charged language targeting vulnerable populations (gamers, porn viewers, and other isolated groups). Additionally, these foreign influence tweets tend to profuse extremely conservative ideologies. These observations differ greatly from the majority of congressional tweets, which tend to have more moderate content and focus on their activities and current legislation proposals. Even the time of tweeting varies greatly between the two groups, with congressional tweets typically originating on workdays while foreign influence tweets are uniformly distributed across the week. Second, President Trump is clearly an important figure as his name appears frequently and is among the most common words in both datasets. Finally, despite the LDA inability to fully differentiate between tweeting groups, it was very effective at separating political topics with limited overlap. Therefore, LDA holds some potential for identifying foreign influence operations, however it needs to be combined with other techniques (such as network analysis—as was used in _Detecting Malign or Subversive Information Efforts over Social Media_) before it can be used for more definitive purposes.
 
 **Future Research**
@@ -109,7 +107,7 @@ Future research into this topic could include:
 2. Further evaluate the extent to which foreign influence operations use of gamer and porn language, tags, and links to attract followers.
 
 ## References
-______________________________________________________________________
+
 Litel, A. (2020). _Alexlitel/congresstweets_ [CSS]. https://github.com/alexlitel/congresstweets (Original work published 2017)
 
 Marcellino, W., Marcinek, K., Pezard, S., &amp; Matthews, M. (2020). _Detecting Malign or Subversive Information Efforts over Social Media_ (p. 67). Rand Corporation. https://www.rand.org/pubs/research\_reports/RR4192.html
@@ -121,14 +119,14 @@ Patrikarakos, D. (2017). _War in 140 Characters: How Social Media is Reshaping C
 Stanley-Becker, I. (2020, May 1). _Technology once used to combat ISIS propaganda is enlisted by Democratic group to counter Trump&#39;s coronavirus messaging_ [Newspaper]. Washington Post; Washington Post. https://www.washingtonpost.com/politics/technology-once-used-to-combat-isis-propaganda-is-enlisted-by-democratic-group-to-counter-trumps-coronavirus-messaging/2020/05/01/6bed5f70-8a5b-11ea-ac8a-fe9b8088e101\_story.html
 
 ## Appendix A
-______________________________________________________________________
+
 
 All code used in this project can be found in the following GitHub Repo:
 
 [https://github.com/dyp6/502FinalProjScripts](https://github.com/dyp6/502FinalProjScripts)
 
 ## Appendix B
-______________________________________________________________________
+
 **Division of Labor**
 
 Patrick Aquino: Exploratory (Congress Tweets) | Research | Paper Edits
