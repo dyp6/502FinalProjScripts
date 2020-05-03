@@ -74,7 +74,7 @@ The word cloud and bar chart of these potentially malign-intention tweets show r
 
  There are a number of pre-made stop word sets, and we used the one from PySpark&#39;s NLTK package. Stop words sets remove some of the most common words—like a, the, it, and, so, but, etc.—as well as words that have no relevance to the overall topic of a document—like then, after, they, there, because, etc. No set of stop words is perfect, so throughout the monthly topic modeling process, which is described below, words that seemed to be overpowering with little or no meaning, and groupings of letters that do not make sense were added to the set of stop words. The final set of added stop words is pictured below.
 
-![](RackMultipart20200503-4-61xuvo_html_7d1a96ad21aeeb0d.png)
+!![Figure 6](image15.png)<br>
 _Figure 6. Terms added to the standard NLTK stop words set._ 
 
  Once the set of stop words was finalized, the final preprocessing pipeline was used to transform the text data into a more suitable form for LDA. This pipeline included tokenization of the words for each document, a normalizer that changes all words to lowercase, and a lemmatizer that takes each word and trims it down to only its root form. Once that is complete, and before the topic modeling begins, the Term Frequency (TF) and Inverse Document Frequency (IDF) were computed in a process often abbreviated to TF-IDF vectorization. These values are input to the LDA algorithm, and topics are assigned based on the probability that the words in a document are from each topic. Topic lists were computed for each month from June 2017 to December of 2019 for both the congressional tweets and the information operations tweets datasets. A number of trials were run on both datasets to try to find an optimal vocabulary size, number of iterations, and minimum number of appearances for terms. A cross validation with grid search would have been used but it was too computationally expensive to evaluate on the full data set. The results of this process will be discussed in the results and conclusions sections.
@@ -92,8 +92,8 @@ _Figure 6. Terms added to the standard NLTK stop words set._
 **Predictive LDA**
 
  The next process was the attempt to distinguish between the two types of tweets using the LDA model that was tuned during the monthly topic modelling process. This algorithm was given two topics to find, in hopes that it would offer some separation between the two types of tweets. The resulting model classified the tweets into two topics, and the full results are shown in _Figure 7_ (below).
-![](RackMultipart20200503-4-61xuvo_html_58329320ecc7a89b.png)
-![](RackMultipart20200503-4-61xuvo_html_29dddc060cd1c5ac.png)
+
+!![Figure 7](image14.png)<br>
 
 _Figure 7. Detailed output for the predictive LDA process._
 
