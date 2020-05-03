@@ -46,7 +46,7 @@ _Figure 2. Frequency of congressional tweets by time of day—the daily sum is 1
 
 Finally, we compared the frequency of tweeting between the two groups by time of day. Unsurprisingly, congressional tweets varied greatly depending on the day with a noticeable decrease in tweet frequency of weekends. Conversely, information operations tweets occurred with near-uniform frequency throughout the week. The resulting plot is below:
 
-!![Figure 3](image13.png)<br>
+![Figure 3](https://github.com/dyp6/502FinalProjScripts/blob/master/image13.png)<br>
 
 Figure 3. _Frequency of tweets by day of the week—each category (congressional and information operations) sums is 100 percent for the entire week._ 
 
@@ -56,14 +56,13 @@ Figure 3. _Frequency of tweets by day of the week—each category (congressional
 
  Using the process detailed above, the congressional tweet NLP visualization is seen in _Figure 4_ . Even though the 2017, 2018, and 2019 visualizations came from the same dataset, it was useful to annualize the word counts to understand how congressional tweeting habits varied from year to year. These charts highlight that congressional tweets tend to focus on legislative matters like bill, health care, family, work, tax, house, and senate. That being said, the yearly word counts do highlight the notable events of the year. In March 2017, _The American Healthcare Act of 2017_ was passed, so it makes sense that health and care appeared often in congressional tweets during that period. In the 2019-word-cloud, &#39;impeachment&#39; is displayed, which also makes sense because of the large public discussion of that matter. Interestingly, &#39;Trump&#39; was in the five most frequently used words during each year of this study.
 
-![](RackMultipart20200503-4-61xuvo_html_ba00fc977a6bdc66.gif)
-![](RackMultipart20200503-4-61xuvo_html_4989f83b134bad98.gif)
+![Figure 4](https://github.com/dyp6/502FinalProjScripts/blob/master/Screen%20Shot%202020-05-03%20at%207.20.38%20PM.png)
 
 _Figure 4. Frequency graphs and word clouds for congressional tweets from 2017 to 2019 (left to right)._
 
 Now compare and contrast the analysis completed above with the analysis of Suspected Information Operation Tweets (below):
 
-![](RackMultipart20200503-4-61xuvo_html_2757d78ff0d19ea.gif)
+![Figure 5](https://github.com/dyp6/502FinalProjScripts/blob/master/Screen%20Shot%202020-05-03%20at%207.21.53%20PM.png)
 _Figure 5. Frequency graphs and word clouds for info Ops tweets_
 
 The word cloud and bar chart of these potentially malign-intention tweets show references to many of the same words as the congressional tweets with some notable differences—emotion-filled words, contentious topics, and specific groups of people. From these visualizations we can gather that angry words are common—such as attack, kill, and leave—but on the other side positive-emotion words like happy and love are also frequent. Similarly, contentious words like Obama, Hillary, Trump and news also appear among the top words in this dataset. Finally, specific groups that cause emotional responses for certain segments of the American population (such as Muslims, police, and ISIS) are prevalent.
@@ -74,7 +73,7 @@ The word cloud and bar chart of these potentially malign-intention tweets show r
 
  There are a number of pre-made stop word sets, and we used the one from PySpark&#39;s NLTK package. Stop words sets remove some of the most common words—like a, the, it, and, so, but, etc.—as well as words that have no relevance to the overall topic of a document—like then, after, they, there, because, etc. No set of stop words is perfect, so throughout the monthly topic modeling process, which is described below, words that seemed to be overpowering with little or no meaning, and groupings of letters that do not make sense were added to the set of stop words. The final set of added stop words is pictured below.
 
-!![Figure 6](image15.png)<br>
+![Figure 6](https://github.com/dyp6/502FinalProjScripts/blob/master/image15.png)<br>
 _Figure 6. Terms added to the standard NLTK stop words set._ 
 
  Once the set of stop words was finalized, the final preprocessing pipeline was used to transform the text data into a more suitable form for LDA. This pipeline included tokenization of the words for each document, a normalizer that changes all words to lowercase, and a lemmatizer that takes each word and trims it down to only its root form. Once that is complete, and before the topic modeling begins, the Term Frequency (TF) and Inverse Document Frequency (IDF) were computed in a process often abbreviated to TF-IDF vectorization. These values are input to the LDA algorithm, and topics are assigned based on the probability that the words in a document are from each topic. Topic lists were computed for each month from June 2017 to December of 2019 for both the congressional tweets and the information operations tweets datasets. A number of trials were run on both datasets to try to find an optimal vocabulary size, number of iterations, and minimum number of appearances for terms. A cross validation with grid search would have been used but it was too computationally expensive to evaluate on the full data set. The results of this process will be discussed in the results and conclusions sections.
@@ -93,7 +92,7 @@ _Figure 6. Terms added to the standard NLTK stop words set._
 
  The next process was the attempt to distinguish between the two types of tweets using the LDA model that was tuned during the monthly topic modelling process. This algorithm was given two topics to find, in hopes that it would offer some separation between the two types of tweets. The resulting model classified the tweets into two topics, and the full results are shown in _Figure 7_ (below).
 
-!![Figure 7](image14.png)<br>
+![Figure 7](https://github.com/dyp6/502FinalProjScripts/blob/master/image14.png)<br>
 
 _Figure 7. Detailed output for the predictive LDA process._
 
