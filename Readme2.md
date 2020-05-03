@@ -35,18 +35,18 @@ Dr. Marck Vaisman <br>
 
  As part of the initial analysis, preliminary statistics and plots were generated to gain a better understanding of any trends or themes worth further investigation. Since the data was largely text-based, traditional summary statistics would not provide appropriate insights. As a result, the data was aggregated and plotted to achieve this effect. The first attempt to understand the data was to plot the daily tweet frequency for each dataset which revealed some interesting trends. The plots are below:
 
-![Figure 1](https://github.com/dyp6/502FinalProjScripts/blob/master/sn8iApZ_kyJFi83rBYoEPBA.png)
+![Figure 1](https://github.com/dyp6/502FinalProjScripts/blob/master/sn8iApZ_kyJFi83rBYoEPBA.png)<br>
 _Figure 1. Daily Tweet Frequency for the Congressional (left) and Information Operations (right) Datasets with notable events highlighted on each plot._
 
  First, congressional tweeting habits tend to follow a steady rhythm throughout the year, which includes a dramatic spike in activity around the president&#39;s annual state of the union address and an expected holiday lull (with the exception of the 2019, which was dominated by tweets about the House Impeachment process). Attempts to maliciously influence the American public, however, appear to have undergone a steady decrease in frequency since the Unite the Right Rally in August 2017 (this could be due to increased scrutiny and twitter&#39;s efforts to remove such content from its site during this period as well). Another interesting observation in the information operations dataset was increased activity in the months leading up to President Trump&#39;s impeachment proceedings (beginning mid-2019). The next interesting trend identified during this analysis was the overwhelming prevalence of congressional tweets during the late afternoon and evening. Unfortunately, this unique finding could not be compared to the information operations dataset because it lacked a time zone element in _tweet\_datetime_ to allow for an appropriate comparison.
 
-![](RackMultipart20200503-4-61xuvo_html_dbc0262aa03989b2.png)
+![Figure 2](https://github.com/dyp6/502FinalProjScripts/blob/master/image11.png)<br>
 
 _Figure 2. Frequency of congressional tweets by time of day—the daily sum is 100 percent_
 
 Finally, we compared the frequency of tweeting between the two groups by time of day. Unsurprisingly, congressional tweets varied greatly depending on the day with a noticeable decrease in tweet frequency of weekends. Conversely, information operations tweets occurred with near-uniform frequency throughout the week. The resulting plot is below:
 
-![](RackMultipart20200503-4-61xuvo_html_fc36f5bf49a85628.png)
+![Figure 3](https://github.com/dyp6/502FinalProjScripts/blob/master/image13.png)<br>
 
 Figure 3. _Frequency of tweets by day of the week—each category (congressional and information operations) sums is 100 percent for the entire week._ 
 
