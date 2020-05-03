@@ -46,7 +46,7 @@ _Figure 2. Frequency of congressional tweets by time of day—the daily sum is 1
 
 Finally, we compared the frequency of tweeting between the two groups by time of day. Unsurprisingly, congressional tweets varied greatly depending on the day with a noticeable decrease in tweet frequency of weekends. Conversely, information operations tweets occurred with near-uniform frequency throughout the week. The resulting plot is below:
 
-![Figure 3](https://github.com/dyp6/502FinalProjScripts/blob/master/image13.png)<br>
+!![Figure 3](image13.png)<br>
 
 Figure 3. _Frequency of tweets by day of the week—each category (congressional and information operations) sums is 100 percent for the entire week._ 
 
